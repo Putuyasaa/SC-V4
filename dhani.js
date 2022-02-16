@@ -1948,7 +1948,7 @@ case 'sc':
 case 'script':
 case 'sourcode':
 if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: fgi})
-fakeitem(`_Silakan mampir ke channel ini_\n_Karena disana ada script bot keren²_\n_Gak mampir sangat rugi besar_\n_https://youtube.com/channel/UCcnWMxH0nUbArCCkqubUeHA_`)
+fakeitem(`_Silakan mampir ke channel ini_\n_Karena disana ada musik keren²_\n_Gak mampir sangat rugi besar_\n_https://youtube.com/c/NoCopyrightSounds_`)
 break
 case 'rules':
 case 's&k':
@@ -2559,7 +2559,7 @@ console.log('Error :', e)
 reply('Gagal menambahkan target, mungkin karena di private')
 }
 break
-case "kick":
+case "kiick":
 if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: fgi})
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins && !mek.key.fromMe) return reply(mess.only.admin)
@@ -2568,7 +2568,7 @@ if (
 mek.message.extendedTextMessage === undefined ||
 mek.message.extendedTextMessage === null
 )
-return reply("Tag target yang ingin di kick!");
+return reply("Jangan gunakan fitur ini menyebabkan ban nya nomor bot!");
 mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid;
 if (mentioned.length > 1) {
 Dhani.groupRemove(from, mentioned);
@@ -2876,7 +2876,7 @@ reply(`${err}`)
     e = String(e)
     if (!e.includes("this.isZero") && !e.includes("jid")) {
 	console.log('Error : %s', color(e, 'red'))
-	Dhani.sendMessage(`${owner}@s.whatsapp.net`, `─────「 *ALERT-ERROR* 」─────\n\n\`\`\`${e}\`\`\`\n\n────────────────────`, MessageType.text, {contextInfo: { forwardingScore: 508, isForwarded: true, externalAdReply:{title: "Developer DhaniGans",body:"Jangan Lupa Subscribe Bot Dhani ?",previewType:"PHOTO",thumbnail:fs.readFileSync('./media/dhani.jpg'),sourceUrl:"https://wa.me/6281333603591"}}})
+	Dhani.sendMessage(`${owner}@s.whatsapp.net`, `─────「 *ALERT-ERROR* 」─────\n\n\`\`\`${e}\`\`\`\n\n────────────────────`, MessageType.text, {contextInfo: { forwardingScore: 508, isForwarded: true, externalAdReply:{title: "Developer Dhani",body:"Jangan Lupa Berak Ya Sob ?",previewType:"PHOTO",thumbnail:fs.readFileSync('./media/dhani.jpg'),sourceUrl:"https://wa.me/6287752078682"}}})
         }
 	// console.log(e)
 	}
