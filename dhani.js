@@ -2219,6 +2219,12 @@ sendMess(_.jid, `*「 BROADCAST GROUP 」*\n*Group* : ${groupName}\n\n${body.sli
 reply('Suksess broadcast group')
 }
 break
+case prefix+'say': case prefix+'tts':
+if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: fgi})
+  if (args.length < 2) return reply(`Kirim perintah ${command} Text`)
+   conn.sendMessage(from, { audio: {url : `https://hadi-api.herokuapp.com/api/tts?text=${q}&language=id`}, mimetype: 'audio/mp4', ptt: true}, {quoted: msg})
+limitAdd(sender, limit)
+   break
 case 'clearall':
 if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: fgi})
 if (!isOwner && !mek.key.fromMe) return  reply(mess.only.owner)
